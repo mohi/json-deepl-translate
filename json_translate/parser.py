@@ -45,6 +45,11 @@ def get_parser(prog_name):
         help="ID of glossary to use when translating",
     )
     parser.add_argument(
+        "-e",
+        "--extend",
+        help="Extend a current json translated file rather than create from scratch",
+    )
+    parser.add_argument(
         "-o",
         "--output",
         default="en.json",
