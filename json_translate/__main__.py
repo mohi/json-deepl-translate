@@ -21,7 +21,10 @@ def main():
     input_file = get_input_file_from_dir(input_dir)
     lang_code = get_target_lang_code(args.locale)
     json_file_name = get_json_file_name_from_input_file(input_file)
-    ext_source_file = get_input_file_from_dir(get_input_dir_from_file(args.extend))
+    if args.extend:
+        ext_source_file = get_input_file_from_dir(get_input_dir_from_file(args.extend))
+    else:
+        ext_source_file = None
     # print(ext_source_file, type(ext_source_file))
     if lang_code.lower() == json_file_name.lower():
         print("You are trying to translate the same language!")

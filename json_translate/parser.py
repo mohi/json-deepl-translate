@@ -48,6 +48,8 @@ def get_parser(prog_name):
         "-e",
         "--extend",
         help="Extend a current json translated file rather than create from scratch",
+        nargs='?',
+        default="",
     )
     parser.add_argument(
         "-o",
